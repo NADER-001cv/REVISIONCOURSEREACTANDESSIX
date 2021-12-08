@@ -1,0 +1,137 @@
+import React from "react" 
+import ReactDom from "react-dom"
+
+React.render(this is elment like div or p or h1 ...,this is properity
+like props we mean style object {style:{color:"red",
+                                        fontSize:"3rem"}},this is content)
+React.createElement(1,2,3 ......)
+then ,document.getElementById("root"));
+
+or if we have component of Application 
+
+import  App from "./App.js" ;
+
+we are doing 
+React.render(<App/> ,document.getElementById("root"));
+
+ How react does work 
+declarative programming we mean every thing is prepared before
+
+UI   -------------->  STATE  ------->  Re-render
+form
+input                 take all ui
+                        then put VDOM     React go RDOM
+button 
+div 
+animation
+....
+
+
+##############  component function #######
+
+how to write function component two method 
+1 arrow function
+
+const App = () => {
+      return ( .... here code html );
+
+ } ;
+
+2 simple function 
+ function App(){
+
+return (.... here some code html ) :
+} ;
+
+#############  some rule ########"
+1 must return ()
+2 Fragment object take from react for using 
+import React , {Fragment} from "react" ;
+ if we want write one p or h1 
+  <Fragment>
+    <p> hy </p>
+  </Fragment>
+
+
+############# style  ###########
+
+inligne style 
+<p style={{color:"red",marginTop:"100px"}}> hy : </p>
+
+or 
+by variable 
+const pstyle = {color:"blue",fontSize:"15px"} ; this is obj
+
+<p style={pstyle}> hy ! </p> 
+
+
+
+
+
+
+
+#########  VARIABLE how to use or deal with varaible ####
+
+
+
+function App(){
+
+let myname =" Ahmed " ;
+let my = myname.touppercase() ;
+
+return(
+  <h2> hy! {my} </h2> 
+  <p style={pstyle} > {my ==="Ahmed" ? "hello AHMED":" hy there"} </p>
+) ;
+}
+export default App ;
+
+
+  ######    HOW TO WRITE map as  loop  ##########
+     const names = ["ahmed","aliaa","nour"] ;
+
+
+     function App(){
+            return (
+                    <>
+                       {names.map( (el) => ( 
+                          
+                          <div> 
+                           <h2>
+                             {el} //here can doing some logic for el {el.toUppercase()}
+                            </h2>
+                          </div>
+                         )
+
+                     )}
+                  </>
+) ;
+}
+
+
+
+
+
+
+
+
+###################################  REGLE OF OBJECT  ########### 
+ 1--Unordred key value pair of data
+ 2--Element access via key
+ 3-- Not itterrable use for in 
+ 4-- key are unique but value are not 
+ 5--key have to be string number or symbole
+ 6-- Can store data and functionnality 
+
+##############################~~~~~~~~#################################
+
+
+
+############################# css module  ###################
+
+the file of css  is name.module.css
+
+then in component use this module 
+import give us name of module as styles from  "./name.module.css" ;
+in tag html  
+     className={styles.name of proerety}

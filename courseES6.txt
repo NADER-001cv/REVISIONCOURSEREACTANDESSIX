@@ -1,0 +1,186 @@
+################ ALL REGLES FOR VAR JS ###############
+1-- var is function scop 
+
+function check(){
+ var name = "ahmed";
+}
+check();
+
+console.log(name) ;
+the result error 
+
+2-- var is block scop for example if && for && while  not  block scop
+
+var namescop = "ahmed";
+var time = 4;
+if(time ===4){
+var namescop = "ali";
+}
+console.log(namescop)  -----> the result ali 
+
+for(var i=0;i<=10;i++){
+
+}
+console.log(i)  the result is  11 
+
+
+
+3-- Its  taking place into  globaly scoped
+var foo  = "hey !"
+console.log(window.foo)  the result is  hey !
+
+
+4-- var  re-declared 
+var  myName = "ahmed" ;
+var myName  = "houda";
+var myName  = "kossay";
+console.log(myName) 
+
+
+5--  var  hoisting 
+
+console.log(name)  undefined 
+var name = "ali" ;
+
+
+
+########################  let  && const  ############
+
+1-- can make the assign for let  
+ let  name = "ahmed"
+   name = "jawaher" ;
+  console.log(name)  the resule is jawaher 
+2-- let  not re-declared 
+ let  name = "ahmed"
+  let  name = "jawaher" ;
+
+ console.log(name)  the resule is  errors 
+
+3-- const  not assign not re-declared
+
+
+
+5-- const && let is  function scop
+function check(){
+ let name =" ahmed";
+}
+  
+check()
+console.log(name)  the result errors
+
+let i = "kareem";
+for(let i =0 ; i<=10;i++)
+{
+console.log(i)
+} 
+console.log(i)
+
+
+
+
+################################  primitive data #####
+1--string 
+2--number
+3--bigint
+4--boolean
+5--undefined
+6--symbole
+primitve  has no function
+primiteve  data  are immutable  (8air 9abel lil ta33dyyle)
+
+pass via value 
+let name1 = "karyme"
+ let name2 =name1 ;
+name1 = "ali"
+console.log("name1",name1)
+console.log("name2",name2)
+
+
+##############  reference  type ###########"
+1--array
+2--object
+3--function 
+4--date
+ references types muttable  (99aabllaaa lil  ta33dyyle tod5el li memory w t3adel)
+
+**regle **  see  same  reference  by pointer 
+
+5-- array && object && date &&  function are mutate (t9der t3adel)
+  not re-assign (3la 5ater re-assign edmer w t3awed array o5er)
+
+so  array always const 
+
+const tabs = ["ahmed","ali","houda"] ;
+tabs.push("wissam")
+console.log(tabs)
+tabs[0] = "ahhmeed"
+console.log(tabs)
+
+
+
+
+################  arrow function ############
+
+
+function Person(){
+  this.age= 10;
+  setInterval(function up(){
+
+    var newage= this.age++ ;
+    console.log(newage);
+  },1000) ;
+}
+var p  = new Person()
+
+the  result  is NaN  
+
+
+
+function Person(){
+  this.age= 0;
+  setInterval( up =() =>{
+
+    var newage= this.age++ ;
+    console.log(newage);
+  },1000) ;
+}
+var p  = new Person()
+the result 0 1 2 3 4 ......
+
+
+
+
+
+
+
+
+##############   spread oprator  #############""
+
+const  namesone = ["ahmed","mohamed","aliaa"] ;
+const namestwo = Object.assign([],namesone) :
+
+namestwo.push("saber")
+
+console.log(namesone)
+ahmed  mohamed  aliaa
+console.log("####################")
+console.log(namestwo)
+
+ahmed  mohamed  aliaa saber
+
+
+or  
+const tabsone = ["hama","chawki","khitem"] ;
+const tabtwo = [...tabsone,"aloulou"]
+
+console.log(tabsone) ;
+0: "hama"
+1: "chawki"
+2: "khitem"
+
+console.log("*******************")
+console.log(tabstwo)
+0: "hama"
+1: "chawki"
+2: "khitem"
+3: "aloulou"
