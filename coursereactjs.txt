@@ -135,3 +135,118 @@ then in component use this module
 import give us name of module as styles from  "./name.module.css" ;
 in tag html  
      className={styles.name of proerety}
+
+
+
+
+
+
+
+
+
+
+
+
+###################################  STATE IS Async ###########
+
+	Animation
+   Forms        
+             Styles   =======> Data life sycle  =======> VDOM/Render
+                                state
+   interactive      
+
+example for state
+ (ey event fil system t3mlou
+ houwa ey ggedd yo5eth nos55a menha )
+
+
+		    State										
+form ===========>  Data  ==========> Render UI       
+
+******  STATE DON'T MUTATE ********
+******  state is asynchrounes   *****
+OLD State  ------------------------>   NEW State
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##################  crud  by  HOOKS  ############
+
+const  [state,setState] = useState(|
+{name:"ahmed",
+ age:"40",
+ address:"meca",
+ phone:"01010 2254786"},
+{name:"ahmed",
+ age:"40",
+ address:"meca",
+ phone:"01010 2254786"},
+{name:"ahmed",
+ age:"40",
+ address:"meca",
+ phone:"01010 2254786"},
+{name:"ahmed",
+ age:"40",
+ address:"meca",
+ phone:"01010 2254786"},
+{name:"ahmed",
+ age:"40",
+ address:"meca",
+ phone:"01010 2254786"}] ;
+
+1-- read via  function state.map((el) => {  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+2--  delete  by  function filter()
+
+
+
+ method one 
+
+const handleDelete = (e,clickidx) => {
+
+
+   const  itemDelete = state.filter((el,index) => index !== clickidx)
+
+      setState(itemDelete)
+}
+
+
+  method two
+const handleDelete = (e,clickidx) => {
+
+
+   
+
+      setState((prevstate) => {
+        return prevstate.filter((el,idx) => idx !== clickidx) ;
+        }) ;
+
+    console.log("inside",state)
+}
+
+
+before return of jsx 
+console.log("outside",state) 
