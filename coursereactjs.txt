@@ -250,3 +250,37 @@ const handleDelete = (e,clickidx) => {
 
 before return of jsx 
 console.log("outside",state) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#########################  controlled  uncontrolled form #####
+
+component controlled by state  input 
+
+  ely  tektbou  fil  input any  7aga  7aref wela ra9m 
+  w ay update fil state you93   RE-RENDER LIL UI 
+
+  EXAMPLE  
+
+const  [state,setState] = useState(" ") ;
+ const  handleFilter = (event)  => {
+     
+        setState(event.target.value) // hathy to55edh bil 7aref louwel ta3mil render ui
+                                   // thoma  eysyre update fil state t3awed to5eth 7aref thany ta3mil render ....
+   }
+
+
+ <input  type="text" value={state} onChange={handleFilter}  />
+component uncontrolled by  useref()
