@@ -184,3 +184,75 @@ console.log(tabstwo)
 1: "chawki"
 2: "khitem"
 3: "aloulou"
+
+
+
+
+
+
+
+
+########################## spread  operation ############
+
+
+
+// call function 
+const  returnNames = (name1,name2,name3)  => {
+console.log(name1);
+  console.log(name2);
+  console.log(name3);
+}
+
+
+const allnames = ["anwer","wejdaw","ali"] ;
+
+returnNames(...allnames)
+
+
+// Rest operator
+
+const  getFullName = (fname,lname,...params) => {
+  console.log(fname);
+  console.log(lname);
+  console.log(params); this is array ["gass","56148514"]
+}
+
+getFullName("Nader","Chargui","gass","56148514") ;
+
+
+
+
+
+################  JS  destruturing array  &&  javascript #####
+
+const  names = ["ali","esraa","karym","anwer"] ;
+
+const [name1,name2,name3,name4] = names ;
+console.log(name1)
+console.log(name2)
+console.log(name3)
+console.log(name4)
+
+ignoring some returned value skiping 
+
+
+const [,name2,,name4] = names ;
+
+console.log(name2)
+console.log(name4)
+
+
+===============  default value ======
+
+const  names = ["ali","esraa","karym"] ;
+
+
+const [name1,name2,name3,name4] = names ;
+
+
+console.log(name1)
+console.log(name2)
+
+console.log(name3)
+console.log(name4)
+
